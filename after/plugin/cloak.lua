@@ -19,3 +19,5 @@ require("cloak").setup({
     },
   },
 })
+
+lvim.builtin.which_key.mappings.ts = { '<cmd>CloakToggle<cr>', "Show/Hide credentials/secrets" }
