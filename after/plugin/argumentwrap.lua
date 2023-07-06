@@ -1,1 +1,2 @@
-vim.keymap.set('n', '<leader>wa', ':call argumentrewrap#RewrapArguments()<CR>')
+lvim.builtin.which_key.mappings.wa = { '<cmd>call argumentrewrap#RewrapArguments()<CR>',
+  "Rewrap arguments (one comma per line)" }
