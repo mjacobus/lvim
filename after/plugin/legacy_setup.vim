@@ -183,7 +183,6 @@ nnoremap <leader>wt :call TrimWhiteSpace()<cr>
 nnoremap <leader>on :e tmp/notes.txt<cr>
 nnoremap <leader>et :e ~/.tmp/
 nnoremap <leader>cet :e tmp/
-nnoremap <leader><leader>e :!<space>
 
 nnoremap <leader>st <esc>:terminal ./shell_test<cr>
 nnoremap <leader><leader>xx <esc>:! chmod +x %<cr>
