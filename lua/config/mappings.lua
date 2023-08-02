@@ -16,13 +16,7 @@ lvim.builtin.which_key.mappings.q.q = { "<cmd>:q!<cr>", "Quit force" }
 
 -- This closes the terminal, I.E. after a test run
 lvim.keys.normal_mode["<leader>j"] = function()
-  local name = vim.api.nvim_buf_get_name(0)
-
-  if string.find(name, "term://") then
-    local number = vim.api.nvim_buf_get_number(0)
-    vim.api.nvim_exec('buffer #', true)
-    vim.api.nvim_buf_delete(number, { force = true })
-  end
+  CloseTerminalBuffer()
 end
 
 lvim.builtin.which_key.mappings.f = { '/', "Search alias" }
@@ -47,3 +41,13 @@ end
 
 
 vim.diagnostic.config({ virtual_text = false })
+
+-- Running tests
+-- vim.api.nvim_set_keymap('n', '<Leader>T', ':lua RunTestFile()<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>t', ':lua RunTestLineByLine()<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>at', ':lua RunAllTests()<CR>', { noremap = true })
+
+
+lvim.builtin.which_key.mappings["T"] = { ":lua RunTestFile()<CR>", "Run test file" }
+lvim.builtin.which_key.mappings["t"] = { ":lua RunTestLineByLine()<CR>", "Run test for current line" }
+lvim.builtin.which_key.mappings["at"] = { ":lua RunAllTests()<CR>", "Run all tests" }
