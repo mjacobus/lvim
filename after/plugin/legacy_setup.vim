@@ -26,18 +26,6 @@
 " functions
 "===============================================================================
 
-" remove trailing white spaces before saving rb files
-function! TrimWhiteSpace()
-" Save cursor position
-  let l = line(".")
-  let c = col(".")
-
-  %s/\s\+$//e
-
-" Restore cursor position
-  call cursor(l, c)
-endfunction
-
 function! ClearEchoAndExecute(command)
   let cmd = "! clear && echo '" . a:command . "' && " . a:command
 
@@ -148,9 +136,6 @@ nnoremap <Down> <c-w>-
 nnoremap <Left> <c-w><
 nnoremap <Right> <c-w>>
 
-" Trim all trailing whitespaces no questions asked.
-nnoremap <leader>wt :call TrimWhiteSpace()<cr>
-" 
 " " quotes
 " " Single quote word
 " nnoremap <leader>sq ciw''<esc><left>p
