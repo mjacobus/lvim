@@ -30,6 +30,7 @@ return {
 
   -- misc
   { 'tpope/vim-surround' },
+  { 'tpope/vim-repeat' },
   { 'tpope/vim-eunuch' },
   { 'tpope/vim-fugitive' },
   { 'Lokaltog/vim-easymotion' },
@@ -65,7 +66,6 @@ return {
   },
 
   -- my old plugins
-  -- { 'tpope/vim-repeat' },
   -- { 'tpope/vim-speeddating' },
   -- { 'tpope/vim-rails' },
   -- { 'mjacobus/vim-snippets',  dependencies = { { 'sirver/ultisnips' } } },
