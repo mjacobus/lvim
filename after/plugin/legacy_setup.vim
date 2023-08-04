@@ -10,9 +10,9 @@
 "     AddTabularPattern! options_hashes /:\w\+ =>/
 "   endif
 " endfunction
-" 
+"
 " autocmd VimEnter * call CustomTabularPatterns()
-" 
+"
 " nnoremap <leader>a\| :Tabularize /\|<CR>
 " vnoremap <leader>a\| :Tabularize /\|<CR>
 " nnoremap <leader>a= :Tabularize /=<CR>
@@ -52,7 +52,7 @@ nnoremap <leader>rm :Delete<cr>
 
 " Last buffer
 nnoremap <leader>o <c-^>
-" 
+"
 " use esc jj to escape terminal mode
 tnoremap <esc> <C-\><C-n>
 tnoremap jj <C-\><C-n>
@@ -67,23 +67,23 @@ nnoremap <leader><leader>b :b<space>
 
 " " search
 " " nnoremap * :keepjumps normal *``<cr>
-" 
+"
 " " Highlight but do not jump
 " " http://stackoverflow.com/questions/4256697/vim-search-and-highlight-but-do-not-jump
 " " nnoremap * *``
 nnoremap * *N
-" 
+"
 " " * and # search for next/previous of selected text when used in visual mode
 " vnoremap * y/<C-R>"<CR>
 " vnoremap # y?<C-R>"<CR>
-" 
+"
 " vnoremap * y/<C-R>"<CR>
 " vnoremap # y?<C-R>"<CR>
-" 
+"
 " " * and # search for next/previous of selected text when used in visual mode
 " vnoremap * y/<C-R>"<CR>
 " vnoremap # y?<C-R>"<CR>
-" 
+"
 " " saves from normal mode
 " nnoremap <leader>s :w<cr>
 " nnoremap <leader>S :w<cr>
@@ -110,11 +110,11 @@ nnoremap <Leader>rel :e<CR>
 
 " " Open vim rc
 " nnoremap <Leader>vi :vsplit ~/.config/nvim/config.vim<CR>
-" 
+"
 " " Fix anoying original K
 " nnoremap K <nop>
 " nnoremap U <nop>
-" 
+"
 " Find
 nnoremap <leader>f <ESC>/
 nnoremap <leader>* <ESC>:find<space>
@@ -129,7 +129,7 @@ nnoremap Q gqap
 " vnoremap <C-c> "+y
 " vnoremap <leader>c "+y
 " nnoremap <leader>v :set paste<cr>"+p:set nopaste<cr>i
-" 
+"
 " buffer resizing mappings (shift + arrow key)
 nnoremap <Up> <c-w>+
 nnoremap <Down> <c-w>-
@@ -141,10 +141,10 @@ nnoremap <Right> <c-w>>
 " nnoremap <leader>sq ciw''<esc><left>p
 " " double quote word
 " nnoremap <leader>dq ciw""<esc><left>p
-" 
+"
 " " Execute last command over a visual selection
 " vnoremap . :norm.<CR>
-" 
+"
 " " Resolving conflics
 " " Vimcasts #33
 " nnoremap <leader>gd :Gdiff<cr>
@@ -152,15 +152,15 @@ nnoremap <Right> <c-w>>
 " nnoremap <leader>dgt :diffget //2 \| :diffupdate<cr>
 " " get branch version: diff get branch
 " nnoremap <leader>dgb :diffget //3 \| :diffupdate<cr>
-" 
+"
 " " quotes
 " nnoremap <leader>qw ciw''<esc>P
 " nnoremap <leader>qw ciw""<esc>P
-" 
+"
 " " sort block
 " nnoremap <leader>sb vip:sort<cr>
 " nnoremap <leader>sa vi(:sort<cr>
-" 
+"
 " " select last paste in visual mode
 " nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
@@ -169,7 +169,6 @@ nnoremap <leader>on :e tmp/notes.txt<cr>
 nnoremap <leader>et :e ~/.tmp/
 nnoremap <leader>cet :e tmp/
 
-nnoremap <leader>st <esc>:terminal ./shell_test<cr>
 nnoremap <leader><leader>xx <esc>:! chmod +x %<cr>
 
 "===============================================================================
