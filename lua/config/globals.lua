@@ -5,20 +5,20 @@ function RunInTerminal(cmd, open_new_tab)
 end
 
 function RunTestFile()
-  local current_path = vim.fn.expand('%:p')
+  local current_path = vim.fn.expand('%')
   local cmd = "run_test " .. current_path
   RunInTerminal(cmd, true)
 end
 
 function RunTestLineByLine()
   local current_line, _ = unpack(vim.api.nvim_win_get_cursor(0))
-  local current_path = vim.fn.expand('%:p')
+  local current_path = vim.fn.expand('%')
   local cmd = "run_test " .. current_path .. " --line=" .. current_line
   RunInTerminal(cmd, true)
 end
 
 function RunAllTests()
-  local current_path = vim.fn.expand('%:p')
+  local current_path = vim.fn.expand('%')
   local cmd = "run_test " .. current_path .. ' --all'
   RunInTerminal(cmd, true)
 end
@@ -32,6 +32,10 @@ function CloseTerminalBuffer()
     -- vim.api.nvim_exec('buffer #', true)
     -- vim.api.nvim_buf_delete(number, { force = true })
 
-    vim.api.nvim_command("bdelete")
+    vim.api.nvim_command("bdelete!")
   end
+end
+
+function RunShellTest()
+  RunInTerminal("./shell_test", true)
 end
