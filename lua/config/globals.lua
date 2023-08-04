@@ -39,3 +39,8 @@ end
 function RunShellTest()
   RunInTerminal("./shell_test", true)
 end
+
+function RunRubocop()
+  local file = vim.fn.expand('%')
+  RunInTerminal("rubocop -A " .. file, true)
+end
