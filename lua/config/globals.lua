@@ -42,5 +42,5 @@ end
 
 function RunRubocop()
   local file = vim.fn.expand('%')
-  RunInTerminal("rubocop -A " .. file, true)
+  RunInTerminal("bundle exec rubocop -A " .. file, true)
 end
