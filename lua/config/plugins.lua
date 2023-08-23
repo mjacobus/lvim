@@ -29,6 +29,18 @@ return {
   },
 
   -- misc
+  {
+    'folke/todo-comments.nvim',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    }
+  },
+  {
+    "AckslD/nvim-trevJ.lua",
+    config = function()
+      require("trevj").setup()
+    end,
+  },
   { 'tpope/vim-surround' },
   { 'tpope/vim-repeat' },
   { 'tpope/vim-eunuch' },
@@ -44,7 +56,6 @@ return {
   { "theprimeagen/refactoring.nvim" },
   { "mbbill/undotree" },
   { 'rking/ag.vim' },
-  { 'weierophinney/argumentrewrap' },
   { 'godlygeek/tabular' },
   { 'mechatroner/rainbow_csv' },
 
