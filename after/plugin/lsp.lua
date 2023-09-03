@@ -7,3 +7,8 @@ lvim.builtin.which_key.mappings['pr'] = {
   "<cmd>lua require('telescope.builtin').lsp_references()<cr>",
   "find references"
 }
+
+lvim.builtin.which_key.mappings['gd'] = {
+  "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>",
+  "find go to definition"
+}

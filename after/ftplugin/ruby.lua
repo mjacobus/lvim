@@ -4,3 +4,7 @@
 vim.cmd([[
   autocmd FileType ruby nnoremap <buffer> <leader>cs :lua RunRubocop()<CR>
 ]])
+
+vim.cmd([[
+  autocmd FileType ruby nnoremap <buffer> <leader>x :lua RunInTerminal("ruby " .. vim.fn.expand('%'), true)<CR>
+]])

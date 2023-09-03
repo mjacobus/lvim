@@ -49,4 +49,4 @@ vim.diagnostic.config({ virtual_text = false })
 lvim.builtin.which_key.mappings["T"] = { ":lua RunTestFile()<CR>", "Run test file" }
 lvim.builtin.which_key.mappings["t"] = { ":lua RunTestLineByLine()<CR>", "Run test for current line" }
 lvim.builtin.which_key.mappings["at"] = { ":lua RunAllTests()<CR>", "Run all tests" }
-lvim.builtin.which_key.mappings["st"] = { ":lua RunShellTest()<CR>", "Run ./shell_test" }
+lvim.builtin.which_key.mappings.s.t = { ":lua RunShellTest()<CR>", "Run ./shell_test" }
