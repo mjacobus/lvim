@@ -1,3 +1,6 @@
+-- this messes up project root by changing pwd
+lvim.builtin.project.active = false
+
 return {
   -- Colorschemes
   { 'mhartington/oceanic-next' },
