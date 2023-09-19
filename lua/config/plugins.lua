@@ -7,6 +7,7 @@ return {
   { 'folke/tokyonight.nvim' },
   { 'chriskempson/vim-tomorrow-theme' },
   { 'jlanzarotta/colorSchemeExplorer' },
+  { 'shaunsingh/solarized.nvim' },
 
   -- GitHub
   -- { 'pwntester/octo.nvim'},
