@@ -81,6 +81,8 @@ return {
     }
   },
 
+  { 'norcalli/nvim-colorizer.lua' },
+
   -- my old plugins
   -- { 'tpope/vim-speeddating' },
   -- { 'tpope/vim-rails' },
