@@ -32,6 +32,11 @@ return {
     end,
   },
 
+  -- Telescope extensions
+  { "mjacobus/telescope-gitmoji.nvim" },
+  { "xiyaowong/telescope-emoji.nvim" },
+
+
   -- misc
   {
     'folke/todo-comments.nvim',
