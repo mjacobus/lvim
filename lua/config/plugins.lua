@@ -61,7 +61,7 @@ return {
   { "folke/trouble.nvim" }, -- @see gh page,
   { "cappyzawa/trim.nvim" },
   { 'nvim-treesitter/nvim-treesitter' },
-  -- { "nvim-treesitter/nvim-treesitter-context" }, -- keep the function name at the top of the file
+  { "nvim-treesitter/nvim-treesitter-context" }, -- keep the function name at the top of the file
   { "theprimeagen/harpoon" },
   { "theprimeagen/refactoring.nvim" },
   { "mbbill/undotree" },
