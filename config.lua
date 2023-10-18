@@ -11,6 +11,9 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.format_on_save.enabled              = true
 lvim.format_on_save.pattern              = {}
 
+lvim.builtin.telescope.defaults.layout_config = {
+  width = 0.9
+}
 
 require("config.ides").setup(
   lvim,
