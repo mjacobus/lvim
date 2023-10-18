@@ -26,28 +26,30 @@ require("config.ides").setup(
   }
 )
 
-require("neotest").setup({
-  adapters = {
-    require('neotest-rspec')({
-      rspec_cmd = function()
-        return vim.tbl_flatten({
-          "bundle",
-          "exec",
-          "rspec",
-        })
-      end
-    }),
-    require("neotest-python")({
-      dap = { justMyCode = false },
-    }),
-    require('neotest-phpunit')({
-      phpunit_cmd = function()
-        return "vendor/bin/phpunit"
-      end
-    }),
-    -- require("neotest-plenary"),
-    -- require("neotest-vim-test")({
-    --   ignore_file_types = { "python", "vim", "lua" },
-    -- }),
-  },
-})
+require("user.utils").safe_require("neotest", function(neotest)
+  neotest.setup({
+    adapters = {
+      require('neotest-rspec')({
+        rspec_cmd = function()
+          return vim.tbl_flatten({
+            "bundle",
+            "exec",
+            "rspec",
+          })
+        end
+      }),
+      require("neotest-python")({
+        dap = { justMyCode = false },
+      }),
+      require('neotest-phpunit')({
+        phpunit_cmd = function()
+          return "vendor/bin/phpunit"
+        end
+      }),
+      -- require("neotest-plenary"),
+      -- require("neotest-vim-test")({
+      --   ignore_file_types = { "python", "vim", "lua" },
+      -- }),
+    },
+  })
+end)
