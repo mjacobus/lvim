@@ -1,9 +1,11 @@
-vim.keymap.set("n", "<leader>zz", function()
-  require("zen-mode").setup {
-    window = {
-      width = 120,
-      options = {}
-    },
-  }
-  require("zen-mode").toggle()
+require("user.utils").safe_require("zen-mode", function(zen)
+  vim.keymap.set("n", "<leader>zz", function()
+    zen.setup {
+      window = {
+        width = 120,
+        options = {}
+      },
+    }
+    zen.toggle()
+  end)
 end)
