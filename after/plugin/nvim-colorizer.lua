@@ -1,1 +1,1 @@
-require 'colorizer'.setup()
+require("user.utils").safe_require('colorizer').setup()

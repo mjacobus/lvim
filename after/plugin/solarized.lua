@@ -17,7 +17,7 @@ function ToggleDarkness()
 
     vim.cmd([[set background=light]])
     lvim.colorscheme = "solarized"
-    require('solarized').set()
+    require("user.utils").safe_require('solarized').set()
     vim.cmd([[colorscheme solarized]])
   else
     g = "dark"

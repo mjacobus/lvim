@@ -1,3 +1,3 @@
 -- @see https://github.com/cappyzawa/trim.nvim
 
-require("trim").setup({})
+require("user.utils").safe_require("trim").setup({})
