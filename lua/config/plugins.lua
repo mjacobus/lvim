@@ -80,13 +80,6 @@ return {
   },
 
   { "olimorris/neotest-rspec" },
-  {
-    'mjacobus/vim-snippets',
-    dependencies = {
-      'sirver/ultisnips',
-      'quangnguyen30192/cmp-nvim-ultisnips'
-    }
-  },
 
   { 'norcalli/nvim-colorizer.lua' },
 
