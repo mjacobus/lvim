@@ -68,6 +68,7 @@ return {
   { 'rking/ag.vim' },
   { 'godlygeek/tabular' },
   { 'mechatroner/rainbow_csv' },
+  { 'nacro90/numb.nvim' }, -- numb.nvim is a Neovim plugin that peeks lines of the buffer in non-obtrusive way.
 
   {
     "nvim-neotest/neotest",
