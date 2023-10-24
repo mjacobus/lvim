@@ -23,6 +23,7 @@ M.setup = function()
 
   local lsp_manager = require("lvim.lsp.manager")
   lsp_manager.setup("solargraph")
+  -- lsp_manager.setup("ruby_ls")
 end
 
 return M
