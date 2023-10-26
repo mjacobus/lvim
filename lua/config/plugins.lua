@@ -29,6 +29,18 @@ return {
   },
 
   { "hrsh7th/cmp-calc" },
+  { "hrsh7th/cmp-nvim-lsp-signature-help" },
+  { "JMarkin/cmp-diag-codes" },
+  { "uga-rosa/cmp-dictionary" },
+  { "f3fora/cmp-spell" },
+  { "petertriho/cmp-git" },
+  { "hrsh7th/cmp-emoji" },
+  { "hrsh7th/cmp-nvim-lua" },
+  -- TODO: Consider https://github.com/dmitmel/cmp-cmdline-history
+  -- TODO: Consider https://github.com/hrsh7th/cmp-cmdline
+  -- TODO: Consider https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol
+  -- TODO: Consider https://github.com/amarakon/nvim-cmp-buffer-lines
+  -- TODO: Consider: https://github.com/nvim-orgmode/orgmode
 
   {
     "zbirenbaum/copilot.lua",
