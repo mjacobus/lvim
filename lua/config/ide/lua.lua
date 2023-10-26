@@ -13,6 +13,8 @@ M.format_on_save = {
 }
 
 M.setup = function()
+  -- https://www.lunarvim.org/docs/configuration/language-features/language-servers
+  require("lvim.lsp.manager").setup("sumneko_lua")
 end
 
 return M
