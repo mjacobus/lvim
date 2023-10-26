@@ -6,6 +6,19 @@
 require("config.globals")
 require("config.mappings")
 
+safe_require = require("user.utils").safe_require
+
+lvim.builtin.project.active = false
+
+safe_require("gitmoji", function(harpoon)
+  table.insert(lvim.builtin.cmp.sources, { name = "gitmoji" })
+end)
+
+safe_require("cmp_calc", function(harpoon)
+  table.insert(lvim.builtin.cmp.sources, { name = "cmp_calc" })
+end)
+
+
 lvim.plugins                             = require("config.plugins")
 lvim.builtin.treesitter.ensure_installed = {}
 lvim.format_on_save.enabled              = true

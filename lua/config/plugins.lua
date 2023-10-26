@@ -1,5 +1,4 @@
 -- this messes up project root by changing pwd
-lvim.builtin.project.active = false
 
 return {
   -- Colorschemes
@@ -19,6 +18,17 @@ return {
     'mattn/gist-vim',
     dependencies = { { 'mattn/webapi-vim' } }
   },
+
+  {
+    "Dynge/gitmoji.nvim",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+    opts = {},
+    ft = "gitcommit",
+  },
+
+  { "hrsh7th/cmp-calc" },
 
   {
     "zbirenbaum/copilot.lua",
