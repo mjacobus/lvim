@@ -24,7 +24,11 @@ return {
     dependencies = {
       "hrsh7th/nvim-cmp",
     },
-    opts = {},
+    opts = {
+      completion = {
+        complete_as = "text"
+      }
+    },
     ft = "gitcommit",
   },
 
