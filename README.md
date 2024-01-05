@@ -12,6 +12,21 @@ cd lvim
 ./install
 ```
 
+
+To remove a pattern, add the following in your `.project.lua` file
+
+```lua
+local pattern = lvim.format_on_save.pattern
+for i, ext in ipairs(pattern) do
+  if ext == "*.rb" then
+    table.remove(pattern, i)
+    break
+  end
+end
+
+lvim.format_on_save.pattern = pattern
+```
+
 #### Resources
 
 - https://www.lunarvim.org/
