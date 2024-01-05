@@ -15,7 +15,11 @@ lvim.builtin.which_key.mappings.q.q = { "<cmd>:q!<cr>", "Quit force" }
 
 -- This closes the terminal, I.E. after a test run
 lvim.keys.normal_mode["<leader>j"] = function()
-  CloseTerminalBuffer()
+  CloseTerminalBuffer(true)
+end
+
+lvim.keys.normal_mode["<leader>k"] = function()
+  CloseTerminalBuffer(false)
 end
 
 lvim.builtin.which_key.mappings.f = { '/', "Search alias" }
