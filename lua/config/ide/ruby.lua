@@ -77,7 +77,8 @@ M.setup = function()
 
   local lsp_manager = require("lvim.lsp.manager")
     lsp_manager.setup("solargraph", {
-      cmd = solargraph_cmd()
+      -- cmd = { "bundle", "exec", "solargraph", "stdio" }
+      cmd = { "solargraph", "stdio" }
     })
   -- lsp_manager.setup("ruby_ls", {
   --   cmd = { "bundle", "exec", "ruby-lsp" },
