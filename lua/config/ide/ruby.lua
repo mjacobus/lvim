@@ -14,6 +14,16 @@ local solargraph_cmd = function()
   return { "solargraph", "stdio" }
 end
 
+local ruby_ls_cmd = function()
+  local ret_code = nil
+  local jid = vim.fn.jobstart("bundle info ruby-lsp", { on_exit = function(_, data) ret_code = data end })
+  vim.fn.jobwait({ jid }, 5000)
+  if ret_code == 0 then
+    return { "bundle", "exec", "ruby-lsp" }
+  end
+  return { "ruby-lsp" }
+end
+
 _timers = {}
 local function setup_diagnostics(client, buffer)
   if require("vim.lsp.diagnostic")._enable then
@@ -76,16 +86,22 @@ M.setup = function()
   }
 
   local lsp_manager = require("lvim.lsp.manager")
-    lsp_manager.setup("solargraph", {
-      -- cmd = { "bundle", "exec", "solargraph", "stdio" }
-      cmd = { "solargraph", "stdio" }
-    })
-  -- lsp_manager.setup("ruby_ls", {
-  --   cmd = { "bundle", "exec", "ruby-lsp" },
-  --   on_attach = function(client, buffer)
-  --     setup_diagnostics(client, buffer)
-  --   end,
+
+  -- check what we want to load, solargraph or ruby_ls. Cannot load both for now
+  -- lsp_manager.setup("solargraph", {
+  --   cmd = solargraph_cmd()
   -- })
+
+  local nvim_lsp = require('lspconfig')
+  lsp_manager.setup("ruby_ls", {
+    root_dir = function(fname)
+      return nvim_lsp.util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
+    end,
+    cmd = ruby_ls_cmd(),
+    -- on_attach = function(client, buffer)
+    --   setup_diagnostics(client, buffer)
+    -- end,
+  })
 end
 
 

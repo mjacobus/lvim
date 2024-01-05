@@ -34,7 +34,6 @@ function CloseTerminalBuffer(new_tab)
       return
     end
 
-
     vim.api.nvim_command("bdelete!")
   end
 end
