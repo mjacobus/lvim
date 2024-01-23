@@ -26,7 +26,7 @@ return {
     },
     opts = {
       completion = {
-        complete_as = "text"
+        -- complete_as = "text"
       }
     },
     ft = "gitcommit",
