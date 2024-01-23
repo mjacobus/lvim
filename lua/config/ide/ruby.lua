@@ -88,14 +88,16 @@ M.setup = function()
   local lsp_manager = require("lvim.lsp.manager")
 
   -- check what we want to load, solargraph or ruby_ls. Cannot load both for now
-  -- lsp_manager.setup("solargraph", {
-  --   cmd = solargraph_cmd()
-  -- })
-
-  local nvim_lsp = require('lspconfig')
-  lsp_manager.setup("ruby_ls", {
+  lsp_manager.setup("solargraph", {
     root_dir = function(fname)
-      return nvim_lsp.util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
+      return require('lspconfig').util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
+    end,
+    cmd = solargraph_cmd()
+  })
+
+  local nvim_lsp = lsp_manager.setup("ruby_ls", {
+    root_dir = function(fname)
+      return require('lspconfig').util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
     end,
     cmd = ruby_ls_cmd(),
     -- on_attach = function(client, buffer)
