@@ -1,5 +1,6 @@
 -- this messes up project root by changing pwd
 
+-- Run Lazy
 return {
   -- Colorschemes
   { 'mhartington/oceanic-next' },
