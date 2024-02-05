@@ -89,6 +89,7 @@ M.setup = function()
 
   -- check what we want to load, solargraph or ruby_ls. Cannot load both for now
   lsp_manager.setup("solargraph", {
+    filetypes = { "ruby" }, -- does not like erb
     root_dir = function(fname)
       return require('lspconfig').util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
     end,
@@ -100,6 +101,7 @@ M.setup = function()
       return require('lspconfig').util.find_git_ancestor(fname) or nvim_lsp.util.path.dirname(fname)
     end,
     cmd = ruby_ls_cmd(),
+    filetypes = { "ruby" }, -- does not like erb
     -- on_attach = function(client, buffer)
     --   setup_diagnostics(client, buffer)
     -- end,

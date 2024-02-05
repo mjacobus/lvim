@@ -74,6 +74,7 @@ require("config.ides").setup(
   {
     require("config.ide.lua"),
     require("config.ide.javascript"),
+    require("config.ide.html"),
     require("config.ide.php"),
     require("config.ide.python"),
     require("config.ide.ruby")
