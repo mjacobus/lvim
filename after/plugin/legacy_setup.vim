@@ -165,9 +165,9 @@ nnoremap <Right> <c-w>>
 " nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " offers to create/edit a tmp file
-nnoremap <leader>on :e tmp/notes.txt<cr>
-nnoremap <leader>et :e ~/.tmp/
-nnoremap <leader>cet :e tmp/
+" nnoremap <leader>on :e tmp/notes.txt<cr>
+" nnoremap <leader>et :e ~/.tmp/
+" nnoremap <leader>cet :e tmp/
 
 nnoremap <leader><leader>xx <esc>:! chmod +x %<cr>
 

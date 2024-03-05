@@ -8,6 +8,12 @@ lvim.builtin.which_key.mappings["q"] = { "<cmd>bdelete<cr>", "close buffer" }
 lvim.builtin.which_key.mappings["bdd"] = { "<cmd>bdelete!<cr>", "close buffer!" }
 lvim.builtin.which_key.mappings["bda"] = { "<cmd>bufdo %bd!<cr>", "close all buffers!" }
 
+-- Notes
+lvim.keys.normal_mode['<leader>et'] = ':e ~/.tmp/notes/' -- TODO: Fix this. NvimTree matches <leader>e and then messes this up
+lvim.keys.normal_mode['<leader><leader>et'] = ':e ~/.tmp/notes/'
+lvim.keys.normal_mode['<leader><leader>on'] = ':e ~/.tmp/notes/notes.md<cr>'
+lvim.keys.normal_mode['<leader><leader>con'] = ':e .tmp/notes/notes.md<cr>'
+
 -- TODO: how to add more meaningful comments
 lvim.keys.insert_mode["jj"] = "<ESC>"
 -- lvim.keys.normal_mode["<leader>qq"] = ":q!<cr>" -- does not work
