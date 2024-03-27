@@ -21,7 +21,8 @@ local ruby_ls_cmd = function()
   if ret_code == 0 then
     return { "bundle", "exec", "ruby-lsp" }
   end
-  return { "ruby-lsp" }
+  -- return { "ruby-lsp" }
+  return { "asdf", "exec", "ruby-lsp" }
 end
 
 _timers = {}
