@@ -108,3 +108,9 @@ require("user.utils").safe_require("neotest", function(neotest)
     },
   })
 end)
+
+-- set comment color a few seconds after the editor is opened
+-- So as to win a race condition with a plugin, I think
+vim.defer_fn(function()
+  vim.cmd [[highlight Comment cterm=italic gui=italic guibg=#4c4e69 guifg=#1a1b26]]
+end, 100)
